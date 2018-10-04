@@ -33,16 +33,16 @@ public class Log2Filter implements Filter {
             throws IOException, ServletException {
  
         if (this.logFile != null) {
-            // Ghi thông tin Log vào File.
+           
             this.logToFile(this.logFile);
         }
  
-        // Cho phép request được đi tiếp. (Vượt qua Filter này).
+      
         chain.doFilter(request, response);
     }
  
     private void logToFile(String fileName) {
-        // Ghi log vào file..
+        
         System.out.println("Write log to file " + fileName);
     }
  
